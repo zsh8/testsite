@@ -4,6 +4,15 @@
     <title>{% block title %}Test Site{% endblock %}</title>
   </head>
   <body>
+    <div id="messages">
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
     <div id="content">{% block content %}{% endblock %}</div>
   </body>
 </html>

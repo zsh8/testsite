@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def homepage(request):
-    return HttpResponse('Home page!')
+    return render(request, 'core/homepage.html')
